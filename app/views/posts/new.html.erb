@@ -6,52 +6,52 @@
       <%= form_with model: @post, id: dom_id(@post), local: true do |f| %>
         <div class="grid grid-cols-1 gap-6 mb-6">
           <div>
-            <%= f.label :title, "Tytuł", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.text_field :title, placeholder: 'Tytuł', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
+            <%= f.label :title, "Title", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.text_field :title, placeholder: 'Title', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
           </div>
           <div>
-            <%= f.label :images, "Zdjęcia", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.label :images, "Images", class: 'block text-gray-700 text-sm font-bold mb-2' %>
             <%= f.file_field :images, multiple: true, class: 'block w-full text-sm text-gray-700 border rounded cursor-pointer focus:outline-none focus:border-purple-500', id: 'images' %>
             <div id="selected-images" class="mt-4"></div>
           </div>
           <div>
-            <%= f.label :description, "Opis", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.text_area :description, placeholder: 'Opis', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline', rows: 10 %>
+            <%= f.label :description, "Description", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.text_area :description, placeholder: 'Description', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline', rows: 10 %>
           </div>
         </div>
         
         <div class="grid grid-cols-2 gap-6 mb-6">
           <div>
-            <%= f.label :price, "Cena", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.number_field :price, placeholder: 'Cena', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline', step: 0.01 %>
+            <%= f.label :price, "Price", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.number_field :price, placeholder: 'Price', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline', step: 0.01 %>
           </div>
           <div>
-            <%= f.label :category_id, "Kategoria", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.collection_select :category_id, @categories, :id, :name, { prompt: "Wybierz kategorię." }, class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
+            <%= f.label :category_id, "Category", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.collection_select :category_id, @categories, :id, :name, { prompt: "Select a category." }, class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
           </div>
           <div>
-            <%= f.label :availability, "Dostępność", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.text_field :availability, placeholder: 'Dostępność', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
+            <%= f.label :availability, "Availability", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.text_field :availability, placeholder: 'Availability', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
           </div>
           <div>
-            <%= f.label :contact_information, "Informacje kontaktowe", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.text_field :contact_information, placeholder: 'Informacje kontaktowe', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
+            <%= f.label :contact_information, "Contact Information", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.text_field :contact_information, placeholder: 'Contact Information', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
           </div>
           <div>
-            <%= f.label :street, "Ulica", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.text_field :street, id: 'street', placeholder: 'Ulica', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
+            <%= f.label :street, "Street", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.text_field :street, id: 'street', placeholder: 'Street', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
           </div>
           <div>
-            <%= f.label :city, "Miasto", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.text_field :city, id: 'city', placeholder: 'Miasto', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
+            <%= f.label :city, "City", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.text_field :city, id: 'city', placeholder: 'City', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
           </div>
           <div>
-            <%= f.label :state, "Województwo", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.text_field :state, id: 'state', placeholder: 'Województwo', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
+            <%= f.label :state, "State", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.text_field :state, id: 'state', placeholder: 'State', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
           </div>
           <div>
-            <%= f.label :country, "Kraj", class: 'block text-gray-700 text-sm font-bold mb-2' %>
-            <%= f.text_field :country, id: 'country', placeholder: 'Kraj', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
+            <%= f.label :country, "Country", class: 'block text-gray-700 text-sm font-bold mb-2' %>
+            <%= f.text_field :country, id: 'country', placeholder: 'Country', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' %>
           </div>
         </div>
         
@@ -64,7 +64,7 @@
             <div id="map" data-lat="<%= @post.latitude %>" data-lng="<%= @post.longitude %>" class="w-full h-64 border rounded-lg"></div>
         </div>
         
-        <%= f.submit 'Zatwierdź', class: 'w-full bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline', data: { turbo: false } %>
+        <%= f.submit 'Submit', class: 'w-full bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline', data: { turbo: false } %>
       <% end %>
     </div>
   </div>

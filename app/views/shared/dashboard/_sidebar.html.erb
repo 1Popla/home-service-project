@@ -7,61 +7,61 @@
       <li>
         <%= link_to new_post_path, data: { turbo: true }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-gray-700' do %>
           <i class="fas fa-plus mr-2 text-gray-700"></i>
-          Nowe ogłoszenie
+          New Post
         <% end %>
       </li>
       <li>
         <%= link_to posts_path, data: { turbo: true }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-gray-700' do %>
           <i class="fas fa-list mr-2 text-gray-700"></i>
-          Ogłoszenia
+          Posts
         <% end %>
       </li>
       <li>
         <%= link_to user_posts_posts_path, data: { turbo: true }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-gray-700' do %>
           <i class="fas fa-user mr-2 text-gray-700"></i>
-          Moje Ogłoszenia
+          My Posts
         <% end %>
       </li>
       <li>
         <%= link_to conversations_path, data: { turbo: true }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-gray-700' do %>
           <i class="fas fa-comments mr-2 text-gray-700"></i>
-          Wiadomości
+          Messages
         <% end %>
       </li>
       <li>
         <%= link_to notifications_path, data: { turbo: true }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-gray-700' do %>
           <i class="fas fa-bell mr-2 text-gray-700"></i>
-          Moje Powiadomienia
+          My Notifications
         <% end %>
       </li>
       <li>
         <%= link_to bookings_path, data: { turbo: true }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-gray-700' do %>
           <i class="fas fa-briefcase mr-2 text-gray-700"></i>
-          Zlecenia
+          Jobs
         <% end %>
       </li>
       <li>
         <%= link_to calendar_bookings_path, data: { turbo: true }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-gray-700' do %>
           <i class="fas fa-calendar-alt mr-2 text-gray-700"></i>
-          Zobacz Kalendarz
+          View Calendar
         <% end %>
       </li>
       <li>
         <%= link_to dashboard_map_path, data: { turbo: true }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-gray-700' do %>
           <i class="fas fa-map mr-2 text-gray-700"></i>
-          Mapa Zleceń
+          Job Map
         <% end %>
       </li>
       <li>
         <%= link_to user_path(current_user), data: { turbo: true }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-gray-700' do %>
           <i class="fas fa-user-circle mr-2 text-gray-700"></i>
-          Profil Użytkownika
+          User Profile
         <% end %>
       </li>
       <li>
         <%= link_to destroy_user_session_path, method: :delete, data: { turbo: false, confirm: 'Are you sure?' }, class: 'flex items-center block p-2 rounded hover:bg-gray-200 text-red-600' do %>
           <i class="fas fa-sign-out-alt mr-2 text-gray-700"></i>
-          Wyloguj
+          Logout
         <% end %>
       </li>
     </ul>
