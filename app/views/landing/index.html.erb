@@ -1,921 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Worxy.pl</title>
-
-        <!-- Meta --> 
-        <meta name="description" content="Plumber Zone is a Creative Multipurpose HTML5 Template">
-        <meta name="keywords" content="Plumber, HTML5, Multipurpose, Template">
-        <meta name="author" content="CodexCoder">
-
-        <!-- Mobile Specific Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-
-        
-
-        <!-- Framework Styles -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-
-        <!-- Fonts Styles -->
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/> 
-        <link rel="stylesheet" type="text/css" href="flat-icon/MyIcons/flaticon.css">
-
-        <!-- Plugins Styles --> 
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-        <link rel="stylesheet" href="css/jquery.fs.boxer.min.css">
-        <link rel="stylesheet" href="css/flexslider.css">
-        <link rel="stylesheet" href="css/swiper.min.css">
-        <link rel="stylesheet" href="css/screen.css">
-          
-        <!-- Home slider style -->
-        <link rel="stylesheet" href="css/slider.css">
-
-        <!-- Project Styles -->
-        <link rel="stylesheet" href="css/style.css"> 
-
-        <!-- Responsive Styles -->
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" >
-    </head>
-
-    <body>
-        <!--  preloader  -->
-        <div id="loading">
-            <div id="loading-center">
-                <div id="loading-center-absolute">
-                    <div class="object" id="object_four"></div>
-                    <div class="object" id="object_three"></div>
-                    <div class="object" id="object_two"></div>
-                    <div class="object" id="object_one"></div>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Home Service Ordering App Landing Page" />
+    <meta name="keywords" content="home service, plumbing, electrician, handyman, cleaning" />
+    <meta name="author" content="HomeServiceApp" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+  </head>
+  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    <div class="pt-24">
+      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+          <p class="uppercase tracking-loose w-full">Reliable Home Services</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">
+            Your Trusted Home Service App
+          </h1>
+          <p class="leading-normal text-2xl mb-8">
+            Get instant access to professional home services like plumbing, electrical work, cleaning, and more.
+          </p>
+          <li class="mr-3 list-none">
+            <a class="inline-block text-black no-underline bg-white hover:bg-gray-200 py-2 px-4 rounded-full shadow-md hover:shadow-lg" href="/users/sign_in">Sign In</a>
+          </li>
         </div>
-        <!--  preloader  -->
-
-
-        <!-- Search area -->
-        <div class="search-area">
-            <div class="search-area-inner">
-                <form action="">
-                    <input type="text" name="search" placeholder="Type & Hits Enter...">
-                </form>
-            </div>  
+        <div class="w-full md:w-3/5 py-6 text-center">
+          <img class="w-full md:w-4/5 z-50" src="<%= asset_url('hero.png') %>" />
         </div>
-        <!-- Search area -->
-
-        
-        <!-- Header -->
-        <header id="header">
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="logo">
-                            <a href="index.html"><img src="images/worxy-logo-cropped.png" alt="Logo" style="width: 75%;"></a>
-                        </div>
-                     <div class="contact-place" id="contact-container" style="cursor: pointer;">
-                        <div class="cp-01 phone">
-                            <div class="cp-inner">
-                            <div class="icon flaticon-phone41"></div>
-                            <div class="phone-text">
-                                <span class="text">Kliknij!</span>
-                                <span class="numbers">aby się zalogować</span>
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="cp-01 mail">
-                            <div class="cp-inner">
-                            <div class="icon flaticon-email19"></div>
-                            <div class="phone-text">
-                                <span class="text">Contact with E-mail</span>
-                                <a href="mailto:info@yourmail.com" class="numbers">info@yourmail.com</a>
-                            </div>
-                            </div>    
-                        </div>
-                        </div>
-
-                        <div class="top-social-media">
-                            <ul class="social-media">
-                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#" class="vimeo"><i class="fa fa-vimeo"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="header-bottom">
-                <div class="primary-menu">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="menu navbar-expand-lg">
-                                    <div class="menu-inner">
-                                        <div class="navbar-header justify-content-between">
-                                            <a href="index.html" class="menu-logo"><img src="images/worxy-logo-cropped.png" alt="Logo" style="width: 50%;"></a>
-                                            <div class="bar-part">
-                                                <div class="search-icon d-lg-none">
-                                                    <i class="fa fa-search"></i>
-                                                </div>
-                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-                                                    <i class="fa fa-bars"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="collapse navbar-collapse justify-content-center" id="bs-example-navbar-collapse-1">
-                                            <ul class="navbar-menu">
-                                                <li class="active-menu">
-                                                    <a href="#"><span>Home</span></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="index.html">Home page One</a></li>
-                                                        <li class="current-page"><a href="home2.html">Home Page Two</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="about.html"><span>About Us</span></a></li>
-                                                <li>
-                                                    <a href="#"><span>Pages</span></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="service.html">Service</a></li>
-                                                        <li><a href="service-detail.html">Service Detail</a></li>
-                                                        <li><a href="team.html">Team Member</a></li>
-                                                        <li><a href="error-page.html">404 Page</a></li>
-                                                    </ul> 
-                                                </li>
-                                                <li>
-                                                    <a href="#"><span>Portfolio</span></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="portfolio-style1.html">Portfolio Style One</a></li>
-                                                        
-                                                        <li><a href="portfolio-style2.html">Portfolio Style Two</a></li>
-                                                        <li><a href="portfolio-massonry.html">Portfolio Massonry</a></li>
-                                                        <li><a href="project-single.html">Portfolio Single</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><span>Blog</span></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="single.html">Blog Single</a></li>
-                                                        <li><a href="blog-page.html">Blog Page</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="online-store.html"><span>Shop</span></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="online-store.html">Shop</a></li>
-                                                        <li><a href="product-detail.html">Product Details</a></li>
-                                                        <li><a href="product-cart.html">Product Cart</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html"><span>Contact</span></a></li>
-                                            </ul>
-                                            <div class="search-icon d-none d-lg-block">
-                                                <i class="fa fa-search"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Header -->
-
-
-        <div id="content" class="v2">
-
-
-            <div class="home-slider-area">
-                <div class="sleekslider">
-                    <div class="slide active bg-1">
-                        <div class="slide-container item-one">
-                            <div class="image-one animated slideInLeft">
-                                <img src="images/home-slider/item-one/man.png" alt="images">
-                            </div>
-                            <div class="image-two animated bounceInUp">
-                                <img src="images/home-slider/item-one/image-area.png" alt="images">
-                            </div>
-                            <div class="text">
-                                <h2 class="animated slideInRight">zatrudnij eksperta</h2>
-                                <h1 class="animated slideInRight">Worxy</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide bg-2">
-                        <div class="slide-container item-two">
-                            <div class="text">
-                                <h2 class="itext1 animated slideInDown"> Worxy to</h2>
-                                <h1 class="itext2 animated slideInLeft">Jedyna platforma</h1>
-                                <h3 class="itext3 animated slideInLeft">która dba o potrzeby naszych klientów</h3>
-                                <a href="/users/sign_up" class="custom-btn  animated slideInUp">Zarejestruj się</a>
-                            </div>
-                            <div class="iimage2 animated slideInRight">
-                                <img src="images/home-slider/item-two/image.png" alt="images">
-                            </div>
-                        </div>              
-                    </div>
-                    <div class="slide bg-3">
-                        <div class="slide-container item-three">
-                            <div class="text animated slideInLeft">
-                                <h2 class="itext1">Używając aplikacji</h2>
-                                <h1 class="itext2">Worxy</h1>
-                                <h3 class="itext3">Zapewnimy Ci</h3>
-                                <ul>
-                                    <li><i class="fa fa-caret-right"></i>Obszerną bazę klientów</li>
-                                    <li><i class="fa fa-caret-right"></i>Bezpieczny system płatności</li>
-                                    <li><i class="fa fa-caret-right"></i>Dopasowane usługi do twoich potrzeb</li>
-                                </ul>
-                                <a href="/users/sign_up" class="custom-btn  animated slideInUp">Zarejestruj się</a>
-                            </div>
-                            <div class="iimage3 animated slideInRight">
-                                <img src="images/home-slider/item-three/slider03.png" alt="images">
-                            </div>
-                        </div>              
-                    </div>
-                    <nav class="nav-split">
-                        <a class="prev" href="">
-                            <span class="icon-wrap"><i class="fa fa-angle-left"></i></span>
-                            <div>
-                                <h3>Title Goes Here</h3>
-                                <img src="images/wallhaven-27263-thumbnail.jpg" alt="Previous thumb"/>
-                            </div>
-                        </a>
-                        <a class="next" href="">
-                            <span class="icon-wrap"><i class="fa fa-angle-right"></i></span>
-                            <div>
-                                <h3>Title Goes Here</h3>
-                                <img src="images/wallhaven-3178-thumb.jpg" alt="Next thumb"/>
-                            </div>
-                        </a>
-                    </nav>
-                </div>
-            </div>
-
-
-            <div class="best-service-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title">
-                            <h2 class="title"><span>Our Best Service</span></h2>
-                            <p class="title-desc">Our Service is so much helpful for your business</p>
-                        </div>
-                        <div class="best-service">
-                            <div class="best-service-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="div post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/home2/news/01.jpg" alt="Thumb"></a>
-                                            </div>
-                                            <div class="content">
-                                                <h3 class="title"><a href="#">Bathroom Plumbing</a></h3>
-                                                <div class="excerpt">Intrinsic impact quality with cross media service. Compelling provide for very low tailers via maintainable.</div>
-                                                <a href="single.html" class="custom-btn">Learn More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="div post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/home2/news/02.jpg" alt="Thumb"></a>
-                                            </div>
-                                            <div class="content">
-                                                <h3 class="title"><a href="#">Tankless Water Heaters</a></h3>
-                                                <div class="excerpt">Intrinsic impact quality with cross media service. Compelling provide for very low tailers via maintainable.</div>
-                                                <a href="single.html" class="custom-btn">Learn More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="div post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/home2/news/03.jpg" alt="Thumb"></a>
-                                            </div>
-                                            <div class="content">
-                                                <h3 class="title"><a href="#">Solve Repair Water Line</a></h3>
-                                                <div class="excerpt">Intrinsic impact quality with cross media service. Compelling provide for very low tailers via maintainable.</div>
-                                                <a href="single.html" class="custom-btn">Learn More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="div post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/home2/news/01.jpg" alt="Thumb"></a>
-                                            </div>
-                                             <div class="content">
-                                                <h3 class="title"><a href="#">Solve Repair Water Line</a></h3>
-                                                <div class="excerpt">Intrinsic impact quality with cross media service. Compelling provide for very low tailers via maintainable.</div>
-                                                <a href="single.html" class="custom-btn">Learn More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="div post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/home2/news/02.jpg" alt="Thumb"></a>
-                                            </div>
-                                             <div class="content">
-                                                <h3 class="title"><a href="#">Solve Repair Water Line</a></h3>
-                                                <div class="excerpt">Intrinsic impact quality with cross media service. Compelling provide for very low tailers via maintainable.</div>
-                                                <a href="single.html" class="custom-btn">Learn More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="div post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/home2/news/03.jpg" alt="Thumb"></a>
-                                            </div>
-                                             <div class="content">
-                                                <h3 class="title"><a href="#">Solve Repair Water Line</a></h3>
-                                                <div class="excerpt">Intrinsic impact quality with cross media service. Compelling provide for very low tailers via maintainable.</div>
-                                                <a href="single.html" class="custom-btn">Learn More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="best-service-container-next">
-                                    <i class="fa fa-angle-left"></i>
-                                </div>
-                                <div class="best-service-container-prev">
-                                    <i class="fa fa-angle-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="expertness-choose">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-12">
-                            <div class="exeprtness">
-                                <div class="section-title">
-                                    <h2 class="title"><span>Popularne zlecenia</span></h2>
-                                    <p class="title-desc">Pomożemy Ci znaleźć zlecenie</p>
-                                </div>
-                                <div class="expertness-area">
-                                    <div class="progress-item mb-4">
-                                        <div class="expert-name">Hydraulik</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"  style="width: 65%;">
-                                            <span>65%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-item mb-4">
-                                        <div class="expert-name">Elektryk</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                                <span>80%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-item mb-4">
-                                        <div class="expert-name">Złota rączka</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 92%;">
-                                                <span>92%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="progress-item mb-4">
-                                        <div class="expert-name">Przeprowadzki</div>
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                                <span>70%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <div class="why-choose">
-                                <div class="section-title">
-                                    <h2 class="title"><span>Czemu WORXY?</span></h2>
-                                    <p class="title-desc">Liczy sie każdy szczegół!</p>
-                                </div>
-                                <div class="why-choose-area">
-                                    <div class="choose-item">
-                                        <div class="choose-icon">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                        <div class="choose-content">
-                                            <h3>Fachowcy na wyciągnięcie ręki</h3>
-                                            <p>Oferujemy dostęp do doświadczonych specjalistów w każdej dziedzinie.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="why-choose-area">
-                                    <div class="choose-item">
-                                        <div class="choose-icon">
-                                            <i class="fa fa-heartbeat"></i>
-                                        </div>
-                                        <div class="choose-content">
-                                            <h3>Zadbamy o Twój dom</h3>
-                                            <p>Otrzymasz szybką i skuteczną pomoc w każdej sytuacji.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="why-choose-area">
-                                    <div class="choose-item">
-                                        <div class="choose-icon">
-                                            <i class="fa fa-line-chart"></i>
-                                        </div>
-                                        <div class="choose-content">
-                                            <h3>Wysoka jakość usług</h3>
-                                            <p>Dążymy do pełnego zadowolenia naszych klientów poprzez indywidualne podejście.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-section">
-                <div class="overlay">
-                    <div class="container">
-                        <div class="row">
-                            <div class="our-client-say">
-                                <div class="section-title">
-                                    <h2 class="title"><span>What Our Client Say</span></h2>
-                                    <p class="title-desc">Our Service is so much helpful for your business</p>
-                                </div>
-                                <div class="flexslider">
-                                    <ul class="slides">
-                                        <li data-thumb="images/home1/thumb/testimonial-thumb1.jpg">
-                                            <div class="testimonial-content">
-                                                <p class="description">Distinctively brand an expanded array of leadership without next-generation catalyst for change. Enthusiastically to generates user-centric imperatives via holistic intellectual capital. Unique and fabricate emerging action item.</p>
-                                                <h3 class="client-name">Jafor Ali</h3>
-                                                <strong class="designation">Customer</strong>
-                                            </div>
-                                        </li>
-                                        <li data-thumb="images/home1/thumb/testimonial-thumb2.jpg">
-                                            <div class="testimonial-content">
-                                                <p class="description">Distinctively brand an expanded array of leadership without next-generation catalyst for change. Enthusiastically to generates user-centric imperatives via holistic intellectual capital. Unique and fabricate emerging action item.</p>
-                                                <h3 class="client-name">Jafor Ali</h3>
-                                                <strong class="designation">Customer</strong>
-                                            </div>
-                                        </li>
-                                        <li data-thumb="images/home1/thumb/testimonial-thumb3.jpg">
-                                            <div class="testimonial-content">
-                                                <p class="description">Distinctively brand an expanded array of leadership without next-generation catalyst for change. Enthusiastically to generates user-centric imperatives via holistic intellectual capital. Unique and fabricate emerging action item.</p>
-                                                <h3 class="client-name">Jafor Ali</h3>
-                                                <strong class="designation">Customer</strong>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div id="countdown">
-                <div class="container">
-                    <div class="row">
-                        <div class="cd-container">
-                            <div class="cd-container-inner">
-                                <div class="cd-item">
-                                    <span class="number-outer"><span class="number">128</span></span>
-                                    <span class="count-name">Successfull Projects</span>
-                                </div>
-                                <div class="cd-item">
-                                    <span class="number-outer"><span class="number">150</span></span>
-                                    <span class="count-name">Clients</span>
-                                </div>
-                                <div class="cd-item">
-                                    <span class="number-outer"><span class="number">100</span>+</span>
-                                    <span class="count-name">Example Projects</span>
-                                </div>
-                                <div class="cd-item">
-                                    <span class="number-outer"><span class="number">75</span>+</span>
-                                    <span class="count-name">Services</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="pricing-table">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title">
-                            <h2 class="title"><span>Pricing Table</span></h2>
-                            <p class="title-desc">Out Service is so much helpful for your business</p>
-                        </div>
-                        <div class="pricing-wrapper">
-                            <div class="row justify-content-center g-4">
-                                <div class="col-xl-4 col-md-6 col-12">
-                                    <div class="pricing-item">
-                                        <h3 class="pricing-title">Plumber Services</h3>
-                                        <div class="price">
-                                            <div class="currency"><span>$99.00</span></div>
-                                            <span class="month">Per Month</span>
-                                        </div>
-                                        <ul>
-                                            <li>1 Website</li>
-                                            <li>Unlimited Bandwidth</li>
-                                            <li>100 GB Disk Space</li>
-                                            <li>10 My SQL Database</li>
-                                            <li>100 E-mail Address</li>
-                                        </ul>
-                                        <a href="#" class="custom-btn">Join Now</a>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6 col-12">
-                                    <div class="pricing-item table-border">
-                                        <h3 class="pricing-title">Drainage Services</h3>
-                                        <div class="price">
-                                            <div class="currency"><span>$99.00</span></div>
-                                            <span class="month">Per Month</span>
-                                        </div>
-                                        <ul>
-                                            <li>1 Website</li>
-                                            <li>Unlimited Bandwidth</li>
-                                            <li>100 GB Disk Space</li>
-                                            <li>10 My SQL Database</li>
-                                            <li>100 E-mail Address</li>
-                                        </ul>
-                                        <a href="#" class="custom-btn">Join Now</a>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-6 col-12">
-                                    <div class="pricing-item">
-                                        <h3 class="pricing-title">Heating Services</h3>
-                                        <div class="price">
-                                            <div class="currency"><span>$99.00</span></div>
-                                            <span class="month">Per Month</span>
-                                        </div>
-                                        <ul>
-                                            <li>1 Website</li>
-                                            <li>Unlimited Bandwidth</li>
-                                            <li>100 GB Disk Space</li>
-                                            <li>10 My SQL Database</li>
-                                            <li>100 E-mail Address</li>
-                                        </ul>
-                                        <a href="#" class="custom-btn">Join Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="recent-news">
-                <div class="overlay">
-                    <div class="container">
-                        <div class="row">
-                            <div class="section-title">
-                                <h2 class="title"><span>Recent News</span></h2>
-                                <p class="title-desc">Out Service is so much helpful for your business</p>
-                            </div>
-                            <div class="news-area">
-                                <div class="row justify-content-center g-4">
-                                    <div class="col-xl-4 col-sm-6 col-12">
-                                        <div class="post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/home2/news//01.jpg" alt="news thumb"></a>
-                                                <div class="content">
-                                                    <h2 class="title"><a href="single.html">Seamlessly Inhance</a></h2>
-                                                    <div class="meta">
-                                                        <span class="calendar"><i class="fa fa-calendar"></i> Jan 02, 2022</span>
-                                                        <span>|</span>
-                                                        <a href="single.html"><i class="fa fa-comment-o"></i> 08 Comments</a>
-                                                    </div>
-                                                    <div class="excerpt">Collaboratively conceptualize high-quality alignments ubiquitous. Synergistically pandemic ideas</div>
-                                                    <a href="single.html" class="custom-btn">Load More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-sm-6 col-12">
-                                        <div class="post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/home2/news//02.jpg" alt="news thumb"></a>
-                                                <div class="content">
-                                                    <h2 class="title"><a href="single.html">Seamlessly Inhance</a></h2>
-                                                    <div class="meta">
-                                                        <span class="calendar"><i class="fa fa-calendar"></i> Jan 02, 2022</span>
-                                                        <span>|</span>
-                                                        <a href="single.html"><i class="fa fa-comment-o"></i> 08 Comments</a>
-                                                    </div>
-                                                    <div class="excerpt">Collaboratively conceptualize high-quality alignments ubiquitous. Synergistically pandemic ideas</div>
-                                                    <a href="single.html" class="custom-btn">Load More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-sm-6 col-12">
-                                        <div class="post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/home2/news//03.jpg" alt="news thumb"></a>
-                                                <div class="content">
-                                                    <h2 class="title"><a href="single.html">Seamlessly Inhance</a></h2>
-                                                    <div class="meta">
-                                                        <span class="calendar"><i class="fa fa-calendar"></i> Jan 02, 2022</span>
-                                                        <span>|</span>
-                                                        <a href="single.html"><i class="fa fa-comment-o"></i> 08 Comments</a>
-                                                    </div>
-                                                    <div class="excerpt">Collaboratively conceptualize high-quality alignments ubiquitous. Synergistically pandemic ideas</div>
-                                                    <a href="single.html" class="custom-btn">Load More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div id="expert">
-                <div class="container">
-                    <div class="row">
-                        <div class="expert-inner">
-                            <div class="section-title">
-                                <h2 class="title"><span>Our Experts</span></h2>
-                                <p class="title-desc">Out Service is so much helpful for your business</p>
-                            </div>
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
-                                    <div class="post-item">
-                                        <div class="post-thumb">
-                                            <a href="single.html"><img src="images/home1/expert1.jpg" alt="Experts"></a>
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="name"><a href="#">Rokey Moesa</a></h3>
-                                            <p class="designation">Plumber</p>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
-                                    <div class="post-item">
-                                        <div class="post-thumb">
-                                            <a href="single.html"><img src="images/home1/expert2.jpg" alt="Experts"></a>
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="name"><a href="#">Rokey Moesa</a></h3>
-                                            <p class="designation">Plumber</p>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
-                                    <div class="post-item">
-                                        <div class="post-thumb">
-                                            <a href="single.html"><img src="images/home1/expert3.jpg" alt="Experts"></a>
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="name"><a href="#">Rokey Moesa</a></h3>
-                                            <p class="designation">Plumber</p>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
-                                    <div class="post-item">
-                                        <div class="post-thumb">
-                                            <a href="single.html"><img src="images/home1/expert4.jpg" alt="Experts"></a>
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="name"><a href="#">Rokey Moesa</a></h3>
-                                            <p class="designation">Plumber</p>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="relative -mt-12 lg:-mt-24">
+      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"
+            ></path>
+            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+          </g>
+          <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path
+              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <section class="bg-white border-b py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Why Choose Us
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-
-        
-        <div id="client">
-            <div class="container">
-                <div class="row">
-                    <div class="client-area">
-                        <div class="client-slider-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-item-inner">
-                                            <a href="#"><img src="images/home1/client1.jpg" alt="client"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-item-inner">
-                                            <a href="#"><img src="images/home1/client2.jpg" alt="client"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-item-inner">
-                                            <a href="#"><img src="images/home1/client3.jpg" alt="client"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-item-inner">
-                                            <a href="#"><img src="images/home1/client4.jpg" alt="client"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-item-inner">
-                                            <a href="#"><img src="images/home1/client5.jpg" alt="client"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="client-item">
-                                        <div class="client-item-inner">
-                                            <a href="#"><img src="images/home1/client3.jpg" alt="client"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Trusted Professionals
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Our team consists of certified and experienced professionals who ensure top-quality service every time. From plumbing emergencies to regular maintenance, we've got you covered.
+              <br />
+              <br />
+            </p>
+          </div>
+          <div class="w-full sm:w-1/2 p-6">
+            <svg class="w-full sm:h-64 mx-auto" viewBox="0 0 1177 598.5" xmlns="http://www.w3.org/2000/svg">
+              <title>Home Services</title>
+              <path
+                transform="translate(-11.5 -150.75)"
+                d="M274.63,501l-6.29-3.91c-.6-.37-1.19-.77-1.79-1.15a59.86,59.86,0,0,0,6.05-116.62l.31,24.66-13.55-26.83h-.17a59.87,59.87,0,0,0-62.58,57c-.06,1.15,0,2.27,0,3.4-4.71-5.38-9-11.15-11.83-17.47-5.73-12.79-5.84-27.28-5.39-44.9.9-34.9,2.41-70.08,4.37-105.14a59.85,59.85,0,0,0,53.16-56.64c.08-1.83,0-3.63,0-5.43,0-.45,0-.89-.07-1.34-.12-1.74-.28-3.46-.55-5.16,0-.28-.1-.55-.15-.82-.24-1.44-.54-2.86-.88-4.26-.13-.53-.26-1-.4-1.57-.42-1.53-.88-3-1.42-4.52-.18-.49-.39-1-.58-1.46-.42-1.09-.88-2.17-1.37-3.23-.26-.56-.54-1.12-.83-1.67-.54-1-.66-1.6-1.23-2.45a59.86,59.86,0,0,0-22.78-21.12c-1.28-.65-2.58-1.27-3.9-1.85-.29-.13-.57-.28-.87-.41-1.28-.56-2.6-1-3.9-1.5-.47-.17-.92-.35-1.4-.51-1.25-.41-2.52-.75-3.8-1.08-.52-.13-1.05-.24-1.57-.35-1.55-.32-3.12-.58-4.69-.78-1.6-.2-3.23-.33-4.85-.39-.38-.02-.75-.1-1.13-.11q-2.92-.1-5.85-.09c-.64,0-1.28.07-1.92.1s-1.24.08-1.86.14c-1.13.09-2.25.21-3.37.36-.79.11-1.58.21-2.36.35-.86.14-1.7.32-2.56.5-.82.18-1.65.36-2.46.56-.57.13-1.14.28-1.7.43-.7.18-1.4.36-2.08.56-.82.24-1.61.51-2.41.78-.43.15-.85.31-1.28.47-1.05.41-2.08.86-3.11,1.34a59.86,59.86,0,0,0-29.9,35.8c-.46,1.52-.84,3.06-1.17,4.62a59.86,59.86,0,0,0-1.8,13.28c0,1.85.06,3.71.19,5.56,0,.56.07,1.12.12,1.67.08.91.21,1.82.33,2.73.14,1.14.3,2.27.48,3.4,0,.23.06.45.09.68.14.95.31,1.89.49,2.83.17.91.35,1.83.56,2.74.2.88.42,1.75.66,2.62.26.95.54,1.9.85,2.84.3.93.63,1.85.98,2.77.31.81.63,1.62,1,2.42.48,1,.99,1.92,1.51,2.86.42.8.84,1.6,1.3,2.38.53.89,1.1,1.76,1.68,2.63.51.77,1.02,1.54,1.56,2.29.65.93,1.33,1.83,2,2.73a59.85,59.85,0,0,0-48.57,57.4c-.24,27.19,15.47,51.91,39.27,64.16.39,2.5.84,5,1.35,7.49A60.08,60.08,0,0,0,274.63,501Z"
+                fill="#f2f2f2"
+              />
+            </svg>
+          </div>
         </div>
-
-        
-        <footer id="footer">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer-top-inner">
-                            <div class="news-letter">
-                                <div class="news-letter-inner">
-                                    <h3 class="title">Join Our Newsletter</h3>
-                                    <form action="#">
-                                        <input type="email" placeholder="Enter Your E-mail Here">
-                                        <button type="submit">Subscribe</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-middle">
-                <div class="container">
-                    <div class="row g-4">
-                        <div class="col-xl-3 col-sm-6 col-12">
-                            <div class="row">
-                                <div class="widget about">
-                                    <h3 class="title">About Us</h3>
-                                    <div class="excerpt">Proactively incentivize superior benefits and resource maximizing supply chains. Efficiently transform interoperable interfaces.</div>
-                                    <address class="address">
-                                        <ul>
-                                            <li><span><i class="fa fa-home"></i></span> New Chokey Road, USA.</li>
-                                            <li><span><i class="fa fa-phone"></i></span> +088 0100 000000.</li>
-                                            <li><span><i class="fa fa-envelope-o"></i></span> <a href="">www.contact@yourmail.com</a></li>
-                                            <li><span><i class="fa fa-globe"></i></span> <a href="">www.yourwebsite.com</a></li>
-                                        </ul>
-                                    </address>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6 col-12">
-                            <div class="row">
-                                <div class="widget w-plr-post">
-                                    <h3 class="title">Popular Post</h3>
-                                    <ul class="small-post-list">
-                                        <li class="post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/footer/01.jpg" alt="Footer Thumb"></a>
-                                            </div>
-                                            <div class="content">
-                                                <h4><a href="single.html">Monotonectally develop seamless e-business.</a></h4>
-                                                <div class="meta">
-                                                    <span class="calendar"><i class="fa fa-calendar"></i> Jan 02, 2022</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/footer/02.jpg" alt="Footer Thumb"></a>
-                                            </div>
-                                            <div class="content">
-                                                <h4><a href="single.html">Monotonectally develop seamless e-business.</a></h4>
-                                                <div class="meta">
-                                                    <span class="calendar"><i class="fa fa-calendar"></i> Jan 02, 2022</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="post-item">
-                                            <div class="post-thumb">
-                                                <a href="single.html"><img src="images/footer/03.jpg" alt="Footer Thumb"></a>
-                                            </div>
-                                            <div class="content">
-                                                <h4><a href="single.html">Monotonectally develop seamless e-business.</a></h4>
-                                                <div class="meta">
-                                                    <span class="calendar"><i class="fa fa-calendar"></i> Jan 02, 2022</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6 col-12">
-                            <div class="widget wtps">
-                                <h3 class="title">Top Services</h3>
-                                <ul class="top-service">
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>Clogged Drains</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>Camera Inspection</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>Sewage Backups</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>Plumbing Repairs</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>Frozen Pipes</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>Common Repairs</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>Trenchless Pipe</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6 col-12">
-                            <div class="row">
-                                <div class="footer-right">
-                                    <div class="footer-right-image">
-                                        <img src="images/footer/footer-big.png" alt="image">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer-bottom-area">
-                            <div class="footer-bottom-left">
-                                <p>&copy; 2022. All Rights Reserved.</p>
-                            </div>
-                            <div class="footer-bottom-right">
-                                <a href="single.html" class="term-condition"> Terms and Conditions</a>
-                                <a href="#" class="privacy-policy"> Privacy Policy</a>
-                                <ul class="social-media">
-                                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#" class="vimeo"><i class="fa fa-vimeo"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <div class="scroll-top">
-            <div class="scrollToTop">
-                <span><i class="fa fa-arrow-up"></i></span>
-            </div> 
+      </div>
+    </section>
+    <section class="bg-gray-100 py-8">
+      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Our Services
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-
-
-        <!-- jquery include -->
-        <script type='text/javascript' src='js/plugins.js'></script>
-        <script type="text/javascript" src="javascripts/sleekslider.min.js"></script>
-        <script type="text/javascript" src="javascripts/app.js"></script>
-        <script type='text/javascript' src='js/functions.js'></script>
-    </body>
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+              <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
+                  Plumbing
+                </p>
+                <div class="w-full font-bold text-xl text-gray-800 px-6">
+                  Leak Repair
+                </div>
+                <p class="text-gray-800 text-base px-6 mb-5">
+                  Our experienced plumbers can handle any leaks, ensuring your home's plumbing system is in perfect working condition.
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+              <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
+                  Electrical
+                </p>
+                <div class="w-full font-bold text-xl text-gray-800 px-6">
+                  Wiring & Installation
+                </div>
+                <p class="text-gray-800 text-base px-6 mb-5">
+                  Our certified electricians provide safe and efficient wiring and installation services for all your electrical needs.
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+              <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
+                  Cleaning
+                </p>
+                <div class="w-full font-bold text-xl text-gray-800 px-6">
+                  Home Cleaning
+                </div>
+                <p class="text-gray-800 text-base px-6 mb-5">
+                  Our professional cleaners ensure your home stays spotless with regular cleaning services tailored to your needs.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white border-b py-8">
+      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Our Customers
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
+                John Doe
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Happy Homeowner
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                "The plumbing service was quick and efficient. No more leaks and everything works perfectly now. Highly recommended!"
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
+                Jane Smith
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Satisfied Customer
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                "I needed some electrical work done, and the team was professional and thorough. My home is now safe and up to code."
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
+                Sarah Lee
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Regular Client
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                "The home cleaning service is excellent. The team is thorough and leaves my house spotless every time. Very happy with their work."
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-100 py-8">
+      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Contact Us
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+              <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
+                  Phone
+                </p>
+                <div class="w-full font-bold text-xl text-gray-800 px-6">
+                  (123) 456-7890
+                </div>
+                <p class="text-gray-800 text-base px-6 mb-5">
+                  Call us for any inquiries or to schedule a service.
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+              <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
+                  Email
+                </p>
+                <div class="w-full font-bold text-xl text-gray-800 px-6">
+                  contact@handymanservices.com
+                </div>
+                <p class="text-gray-800 text-base px-6 mb-5">
+                  Send us an email for non-urgent inquiries.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-900 text-white">
+      <div class="container mx-auto py-8">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/4 p-6 flex flex-col">
+            <a href="#" class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
+              <svg
+                class="h-8 fill-current text-white inline-block"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M 10 0 C 4.486 0 0 4.486 0 10 s 4.486 10 10 10 s 10 -4.486 10 -10 S 15.514 0 10 0 Z M 15.278 13.333 C 14.242 14.798 12.666 15.714 11 15.93 V 18 H 9 v -2.07 c -1.666 -0.216 -3.242 -1.132 -4.278 -2.597 L 6.48 12.48 C 7.273 13.671 8.607 14.409 10 14.409 s 2.727 -0.738 3.52 -1.929 L 15.278 13.333 Z M 17 9.999 h -3 V 9 h 3 V 9.999 Z M 6.48 7.519 L 4.722 6.667 C 5.758 5.202 7.334 4.286 9 4.07 V 2 h 2 v 2.07 c 1.666 0.216 3.242 1.132 4.278 2.597 L 13.52 7.519 C 12.727 6.328 11.393 5.59 10 5.59 S 7.273 6.328 6.48 7.519 Z M 3 9 h 3 v 0.999 H 3 V 9 Z" />
+              </svg>
+              Handyman
+            </a>
+            <p class="mt-4 text-gray-400">
+              Your one-stop solution for all home maintenance services. From plumbing to electrical work, our team of experts is here to help.
+            </p>
+          </div>
+          <div class="w-full md:w-1/4 p-6 flex flex-col">
+            <h3 class="font-bold text-xl text-gray-100">Services</h3>
+            <ul class="mt-4">
+              <li class="mt-2">
+                <a href="#" class="no-underline text-gray-400 hover:text-gray-100">
+                  Plumbing
+                </a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="no-underline text-gray-400 hover:text-gray-100">
+                  Electrical
+                </a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="no-underline text-gray-400 hover:text-gray-100">
+                  Cleaning
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4 p-6 flex flex-col">
+            <h3 class="font-bold text-xl text-gray-100">About</h3>
+            <ul class="mt-4">
+              <li class="mt-2">
+                <a href="#" class="no-underline text-gray-400 hover:text-gray-100">
+                  Company
+                </a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="no-underline text-gray-400 hover:text-gray-100">
+                  Team
+                </a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="no-underline text-gray-400 hover:text-gray-100">
+                  Careers
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4 p-6 flex flex-col">
+            <h3 class="font-bold text-xl text-gray-100">Contact</h3>
+            <ul class="mt-4">
+              <li class="mt-2">
+                <a href="tel:+1234567890" class="no-underline text-gray-400 hover:text-gray-100">
+                  Phone:  456-7890
+                </a>
+              </li>
+              <li class="mt-2">
+                <a href="mailto:contact@handymanservices.com" class="no-underline text-gray-400 hover:text-gray-100">
+                  Email: contact@handymanservices.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var contactContainer = document.getElementById("contact-container");
-  if (contactContainer) {
-    contactContainer.addEventListener("click", function(e) {
-      window.location.href = "/users/sign_in";
-    });
-  }
-});
-</script>
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+      }
+    </style>
